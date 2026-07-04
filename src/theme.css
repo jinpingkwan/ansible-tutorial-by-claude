@@ -1,0 +1,368 @@
+/* ---------------------------------------------------------------------- */
+/* Material 3 Expressive design tokens — light + dark color schemes,       */
+/* type scale, and shape scale. These are the CSS custom properties that   */
+/* @material/web components read directly (--md-sys-color-*, etc.)        */
+/* ---------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Color: light scheme (Google-blue expressive seed) ---- */
+  --md-sys-color-primary: #0b57d0;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d3e3fd;
+  --md-sys-color-on-primary-container: #041e49;
+
+  --md-sys-color-secondary: #375e9a;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #d7e3ff;
+  --md-sys-color-on-secondary-container: #0f1c33;
+
+  --md-sys-color-tertiary: #8a4a9e;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #fad7ff;
+  --md-sys-color-on-tertiary-container: #34103f;
+
+  --md-sys-color-error: #b3261e;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #f9dedc;
+  --md-sys-color-on-error-container: #410e0b;
+
+  --md-sys-color-success: #146c2e;
+  --md-sys-color-on-success: #ffffff;
+  --md-sys-color-success-container: #c2f5cd;
+  --md-sys-color-on-success-container: #04210f;
+
+  --md-sys-color-background: #f8f9ff;
+  --md-sys-color-on-background: #1a1c1e;
+  --md-sys-color-surface: #f8f9ff;
+  --md-sys-color-on-surface: #1a1b1f;
+  --md-sys-color-surface-variant: #e0e2ec;
+  --md-sys-color-on-surface-variant: #43474e;
+
+  --md-sys-color-outline: #74777f;
+  --md-sys-color-outline-variant: #c4c6d0;
+
+  --md-sys-color-surface-dim: #d8dae0;
+  --md-sys-color-surface-bright: #f8f9ff;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f2f3fa;
+  --md-sys-color-surface-container: #eceef4;
+  --md-sys-color-surface-container-high: #e6e8ef;
+  --md-sys-color-surface-container-highest: #e1e2e9;
+
+  --md-sys-color-inverse-surface: #2f3033;
+  --md-sys-color-inverse-on-surface: #f1f0f4;
+  --md-sys-color-inverse-primary: #aac7ff;
+
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+
+  /* ---- App-specific accent tones (per-section colorways) ---- */
+  --accent-1: #0b57d0;      /* section 1 — setup */
+  --accent-1-container: #d3e3fd;
+  --accent-1-on-container: #041e49;
+  --accent-2: #146c2e;      /* section 2 — syntax */
+  --accent-2-container: #c2f5cd;
+  --accent-2-on-container: #04210f;
+  --accent-3: #8a4a9e;      /* section 3 — inventories */
+  --accent-3-container: #fad7ff;
+  --accent-3-on-container: #34103f;
+  --accent-4: #b8590b;      /* section 4 — playbooks */
+  --accent-4-container: #ffddb8;
+  --accent-4-on-container: #2e1500;
+  --accent-5: #b3261e;      /* section 5 — debugging */
+  --accent-5-container: #f9dedc;
+  --accent-5-on-container: #410e0b;
+  --accent-6: #006874;      /* section 6 — cisco connections */
+  --accent-6-container: #97f0ff;
+  --accent-6-on-container: #001f24;
+  --accent-7: #4355b9;      /* section 7 — cisco facts */
+  --accent-7-container: #dde1ff;
+  --accent-7-on-container: #00105c;
+  --accent-8: #7c5800;      /* section 8 — cisco config playbooks */
+  --accent-8-container: #ffdf9d;
+  --accent-8-on-container: #271900;
+  --accent-9: #56690b;      /* section 9 — cisco backups/compliance */
+  --accent-9-container: #dcf791;
+  --accent-9-on-container: #1a2100;
+  --accent-10: #984061;     /* section 10 — cisco debugging */
+  --accent-10-container: #ffd9e3;
+  --accent-10-on-container: #3e001f;
+
+  --terminal-bg: #1b1c1e;
+  --terminal-fg: #e3e3e3;
+  --terminal-accent: #7cd992;
+
+  /* ---- Shape scale (expressive: generous rounding) ---- */
+  --shape-xs: 12px;
+  --shape-sm: 16px;
+  --shape-md: 20px;
+  --shape-lg: 28px;
+  --shape-xl: 36px;
+  --shape-full: 999px;
+
+  /* Component shape overrides for a more expressive, rounder feel */
+  --md-elevated-card-container-shape: var(--shape-lg);
+  --md-outlined-card-container-shape: var(--shape-lg);
+  --md-filled-card-container-shape: var(--shape-lg);
+  --md-filled-button-container-shape: var(--shape-full);
+  --md-outlined-button-container-shape: var(--shape-full);
+  --md-text-button-container-shape: var(--shape-full);
+  --md-filled-tonal-button-container-shape: var(--shape-full);
+  --md-outlined-text-field-container-shape: var(--shape-sm);
+  --md-outlined-select-text-field-container-shape: var(--shape-sm);
+
+  /* ---- Typography ---- */
+  --font-brand: 'Google Sans', 'Roboto Flex', Roboto, system-ui, sans-serif;
+  --font-body: 'Roboto Flex', Roboto, system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --md-icon-font: 'Material Symbols Rounded';
+
+  --md-ref-typeface-brand: var(--font-brand);
+  --md-ref-typeface-plain: var(--font-body);
+
+  --shadow-color: 220 30% 40%;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --md-sys-color-primary: #aac7ff;
+    --md-sys-color-on-primary: #062e6f;
+    --md-sys-color-primary-container: #284777;
+    --md-sys-color-on-primary-container: #d3e3fd;
+
+    --md-sys-color-secondary: #abc7ff;
+    --md-sys-color-on-secondary: #072f60;
+    --md-sys-color-secondary-container: #1e4577;
+    --md-sys-color-on-secondary-container: #d7e3ff;
+
+    --md-sys-color-tertiary: #edb6ff;
+    --md-sys-color-on-tertiary: #4d1962;
+    --md-sys-color-tertiary-container: #683079;
+    --md-sys-color-on-tertiary-container: #fad7ff;
+
+    --md-sys-color-error: #f2b8b5;
+    --md-sys-color-on-error: #601410;
+    --md-sys-color-error-container: #8c1d18;
+    --md-sys-color-on-error-container: #f9dedc;
+
+    --md-sys-color-success: #86d996;
+    --md-sys-color-on-success: #003914;
+    --md-sys-color-success-container: #06531f;
+    --md-sys-color-on-success-container: #c2f5cd;
+
+    --md-sys-color-background: #111318;
+    --md-sys-color-on-background: #e2e2e9;
+    --md-sys-color-surface: #111318;
+    --md-sys-color-on-surface: #e2e2e9;
+    --md-sys-color-surface-variant: #43474e;
+    --md-sys-color-on-surface-variant: #c4c6d0;
+
+    --md-sys-color-outline: #8e9099;
+    --md-sys-color-outline-variant: #43474e;
+
+    --md-sys-color-surface-dim: #111318;
+    --md-sys-color-surface-bright: #37393e;
+    --md-sys-color-surface-container-lowest: #0c0e13;
+    --md-sys-color-surface-container-low: #191c20;
+    --md-sys-color-surface-container: #1d2024;
+    --md-sys-color-surface-container-high: #282a2f;
+    --md-sys-color-surface-container-highest: #33353a;
+
+    --md-sys-color-inverse-surface: #e2e2e9;
+    --md-sys-color-inverse-on-surface: #2f3033;
+    --md-sys-color-inverse-primary: #0b57d0;
+
+    --accent-1: #aac7ff;
+    --accent-1-container: #284777;
+    --accent-1-on-container: #d3e3fd;
+    --accent-2: #86d996;
+    --accent-2-container: #06531f;
+    --accent-2-on-container: #c2f5cd;
+    --accent-3: #edb6ff;
+    --accent-3-container: #683079;
+    --accent-3-on-container: #fad7ff;
+    --accent-4: #ffb877;
+    --accent-4-container: #874400;
+    --accent-4-on-container: #ffddb8;
+    --accent-5: #f2b8b5;
+    --accent-5-container: #8c1d18;
+    --accent-5-on-container: #f9dedc;
+    --accent-6: #5ddbec;
+    --accent-6-container: #004f58;
+    --accent-6-on-container: #97f0ff;
+    --accent-7: #bcc2ff;
+    --accent-7-container: #2a3982;
+    --accent-7-on-container: #dde1ff;
+    --accent-8: #f4bd52;
+    --accent-8-container: #5e4200;
+    --accent-8-on-container: #ffdf9d;
+    --accent-9: #c0d875;
+    --accent-9-container: #3f4d00;
+    --accent-9-on-container: #dcf791;
+    --accent-10: #ffb0cb;
+    --accent-10-container: #5e1140;
+    --accent-10-on-container: #ffd9e3;
+
+    --terminal-bg: #0a0b0d;
+    --terminal-fg: #e3e3e3;
+    --terminal-accent: #7cd992;
+  }
+}
+
+/* Explicit dark override (applied when the user toggles the in-app switch) */
+:root[data-theme='dark'] {
+  --md-sys-color-primary: #aac7ff;
+  --md-sys-color-on-primary: #062e6f;
+  --md-sys-color-primary-container: #284777;
+  --md-sys-color-on-primary-container: #d3e3fd;
+
+  --md-sys-color-secondary: #abc7ff;
+  --md-sys-color-on-secondary: #072f60;
+  --md-sys-color-secondary-container: #1e4577;
+  --md-sys-color-on-secondary-container: #d7e3ff;
+
+  --md-sys-color-tertiary: #edb6ff;
+  --md-sys-color-on-tertiary: #4d1962;
+  --md-sys-color-tertiary-container: #683079;
+  --md-sys-color-on-tertiary-container: #fad7ff;
+
+  --md-sys-color-error: #f2b8b5;
+  --md-sys-color-on-error: #601410;
+  --md-sys-color-error-container: #8c1d18;
+  --md-sys-color-on-error-container: #f9dedc;
+
+  --md-sys-color-success: #86d996;
+  --md-sys-color-on-success: #003914;
+  --md-sys-color-success-container: #06531f;
+  --md-sys-color-on-success-container: #c2f5cd;
+
+  --md-sys-color-background: #111318;
+  --md-sys-color-on-background: #e2e2e9;
+  --md-sys-color-surface: #111318;
+  --md-sys-color-on-surface: #e2e2e9;
+  --md-sys-color-surface-variant: #43474e;
+  --md-sys-color-on-surface-variant: #c4c6d0;
+
+  --md-sys-color-outline: #8e9099;
+  --md-sys-color-outline-variant: #43474e;
+
+  --md-sys-color-surface-dim: #111318;
+  --md-sys-color-surface-bright: #37393e;
+  --md-sys-color-surface-container-lowest: #0c0e13;
+  --md-sys-color-surface-container-low: #191c20;
+  --md-sys-color-surface-container: #1d2024;
+  --md-sys-color-surface-container-high: #282a2f;
+  --md-sys-color-surface-container-highest: #33353a;
+
+  --md-sys-color-inverse-surface: #e2e2e9;
+  --md-sys-color-inverse-on-surface: #2f3033;
+  --md-sys-color-inverse-primary: #0b57d0;
+
+  --accent-1: #aac7ff;
+  --accent-1-container: #284777;
+  --accent-1-on-container: #d3e3fd;
+  --accent-2: #86d996;
+  --accent-2-container: #06531f;
+  --accent-2-on-container: #c2f5cd;
+  --accent-3: #edb6ff;
+  --accent-3-container: #683079;
+  --accent-3-on-container: #fad7ff;
+  --accent-4: #ffb877;
+  --accent-4-container: #874400;
+  --accent-4-on-container: #ffddb8;
+  --accent-5: #f2b8b5;
+  --accent-5-container: #8c1d18;
+  --accent-5-on-container: #f9dedc;
+  --accent-6: #5ddbec;
+  --accent-6-container: #004f58;
+  --accent-6-on-container: #97f0ff;
+  --accent-7: #bcc2ff;
+  --accent-7-container: #2a3982;
+  --accent-7-on-container: #dde1ff;
+  --accent-8: #f4bd52;
+  --accent-8-container: #5e4200;
+  --accent-8-on-container: #ffdf9d;
+  --accent-9: #c0d875;
+  --accent-9-container: #3f4d00;
+  --accent-9-on-container: #dcf791;
+  --accent-10: #ffb0cb;
+  --accent-10-container: #5e1140;
+  --accent-10-on-container: #ffd9e3;
+
+  --terminal-bg: #0a0b0d;
+  --terminal-fg: #e3e3e3;
+  --terminal-accent: #7cd992;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reset + base                                                            */
+/* ---------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-brand);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; }
+
+a { color: var(--md-sys-color-primary); }
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* Slim, Google-like scrollbars */
+* { scrollbar-width: thin; scrollbar-color: var(--md-sys-color-outline-variant) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant);
+  border-radius: var(--shape-full);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Type scale utility classes (M3-ish)                                    */
+/* ---------------------------------------------------------------------- */
+
+.display-lg { font-family: var(--font-brand); font-size: clamp(2.25rem, 4vw, 3.5rem); font-weight: 500; line-height: 1.08; }
+.display-md { font-family: var(--font-brand); font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 500; line-height: 1.12; }
+.headline-lg { font-family: var(--font-brand); font-size: 2rem; font-weight: 500; line-height: 1.2; }
+.headline-md { font-family: var(--font-brand); font-size: 1.6rem; font-weight: 500; line-height: 1.25; }
+.headline-sm { font-family: var(--font-brand); font-size: 1.3rem; font-weight: 500; line-height: 1.3; }
+.title-lg { font-family: var(--font-brand); font-size: 1.125rem; font-weight: 500; }
+.title-md { font-size: 1rem; font-weight: 600; letter-spacing: 0.01em; }
+.title-sm { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.01em; }
+.body-lg { font-size: 1rem; line-height: 1.6; font-weight: 400; }
+.body-md { font-size: 0.9rem; line-height: 1.55; font-weight: 400; }
+.body-sm { font-size: 0.8rem; line-height: 1.5; font-weight: 400; }
+.label-lg { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; }
+.label-md { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; }
+
+.on-surface-variant { color: var(--md-sys-color-on-surface-variant); }
+.text-primary { color: var(--md-sys-color-primary); }
